@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 用户指定配色 */
+  --color-cream: #F7EFE2;
+  --color-sand: #EDE5D8;
+  --color-brown: #8B7355;
+  --color-olive: #6B8E5A;
+  --color-terra: #C47A6C;
+  --color-charcoal: #3D3A38;
+  --color-charcoal-light: #8A8580;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Noto Serif SC', 'Georgia', serif;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-charcoal-light);
+}
+
+/* 输入框统一样式 */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* 按钮基础重置 */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* 表格样式 */
+table {
+  border-collapse: collapse;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.25s ease-out;
+}
+
+/* 弹窗动画：小屏底部滑入（与 sm 断点 640px 对应），桌面淡入 */
+.animate-modal-sheet {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@media (max-width: 639px) {
+  .animate-modal-sheet {
+    animation: slideUp 0.25s ease-out;
+  }
+}
+
+/* 工具类 */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* 数字字体 */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

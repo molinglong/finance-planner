@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Finance Planner</string>
+    <string name="title_activity_main">Finance Planner</string>
+    <string name="package_name">com.xiaz.financeplanner</string>
+    <string name="custom_url_scheme">com.xiaz.financeplanner</string>
+    <string name="app_lock_service_label">冷静期应用锁</string>
+    <string name="app_lock_service_desc">消费冷静期内临时锁定分身微信（存钱号），防止冲动消费。冷静期结束后自动解锁，全程不读取屏幕内容。</string>
+</resources>

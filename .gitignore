@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+android/app/build/
+android/.gradle/
+android/captures/
+android/local.properties
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Database files (contain user data)
+*.db
+*.db-shm
+*.db-wal
+server/data/
+
+# Test data
+.test-freeze-data/
+.tmp-test-data/
+.tmp-*
+
+# Screenshots
+.qoder-*.png
+
+# Logs
+dev-server.log
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+
+# APK
+*.apk
